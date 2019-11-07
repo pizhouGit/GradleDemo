@@ -18,7 +18,7 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @PostMapping("/")
+    @PostMapping("/add")
     public Product addProduct(@RequestBody Product product) {
         logger.info("创建产品，参数{}", product);
         Product result = productService.addProduct(product);
